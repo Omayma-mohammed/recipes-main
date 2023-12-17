@@ -1,0 +1,35 @@
+<nav>
+
+  <div class="d-flex justify-content-around align-items-center navbar">
+      <div><img class="logo" src="./assets/img/logo.png" alt=""></div>
+      <!-- logo -->
+      <div class="d-flex">
+          <div class="me-4 fs-5 link fw-semibold" routerLink="/recipes">Recipes</div>
+          <div class="me-2 fs-5 link fw-semibold" routerLink="/favorites">Favorites</div>
+      </div>
+      <!-- links -->
+      <div class="d-flex input-container align-items-center p-2 rounded-pill">
+          <div class="d-flex align-items-center  search-contaienr-res">
+              <div class="me-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-search" viewBox="0 0 16 16">
+                      <path
+                          d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                  </svg>
+              </div>
+              <input type="text" placeholder="search" [(ngModel)]="searchTerm" >
+              <button class="bg-dark text-light rounded-pill px-2 p-1" (click)="search()">search</button>
+          </div>
+          <!-- search bar at big screens -->
+          <button class="d-none search-res p-2" data-bs-toggle="modal" data-bs-target="#exampleModal"><svg
+                  xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                  class="bi bi-search" viewBox="0 0 16 16">
+                  <path
+                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+              </svg>
+          </button>
+          <!-- search bar at small screens -->
+      </div>
+  </div>
+
+</nav>

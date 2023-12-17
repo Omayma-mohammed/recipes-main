@@ -1,0 +1,36 @@
+<body>
+      <div class="container mt-3">
+        <div class="row ">
+            <div class="col-12 col-md-6">
+                <div class="product-container position-relative">
+                    <div
+                        class="bg-light rounded-circle p-1 position-absolute fav d-flex justify-content-center align-items-center" (click)="addToFavorites($event)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-heart" viewBox="0 0 16 16">
+                            <path
+                                d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                        </svg>
+                    </div>
+                    <img [src]="recipe.image" class="w-100" [alt]="recipe.title">
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="d-flex flex-column">
+                    <div class="fw-bold fs-1 text-dark">{{recipe.title}}</div>
+                    <div class="d-flex align-items-center my-2">
+                        <div class="text-orange fw-semibold">{{recipe.pricePerServing}}</div>
+                        <div class="text-secondary fw-semibold">&nbsp;/per serving</div>
+                    </div>
+                    <div class="text-secondary fs-5 fw-semibold" [innerHTML]="recipe.instructions"></div>
+                    <div class="d-flex flex-column my-2">
+                        <div class="fs-3 fw-bold">lngredients</div>
+                        <div class="d-flex align-items-center flex-wrap mt-2 gap-2">
+                            <div class="btn btn-orange col-2 text-center fs-7 fs-md-6 ingredient" *ngFor="let ingredient of recipe.extendedIngredients">{{ingredient.name}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
